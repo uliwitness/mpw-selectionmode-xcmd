@@ -24,12 +24,12 @@ TOOLBOXFLAGS=-d OLDROUTINENAMES=1 -typecheck relaxed
 
 OBJECTS=$(SOURCES:%.c=build/obj/%.o)
 
-all: prepass build/$(RNAME)
+all: prepass build/$(RNAME).rsrc
 
 prepass:
 	mkdir -p build build/obj
 
-build/$(RNAME): $(OBJECTS)
+build/$(RNAME).rsrc: $(OBJECTS)
 	$(LD) $(LDFLAGS) $(OBJECTS) $(LIBRARIES) -o $@
 	$(REZ) -rd $(RFILES) -o $@ -i $(RINCLUDES) -append
 
