@@ -1,0 +1,1 @@
+#include "SysTypes.r"#include "Types.r"resource 'vers' (1) {	0x01, 0x00, release, 0x00,	verUS,	"1.0",	"1.0, \251 2022, Uli Kusterer"};

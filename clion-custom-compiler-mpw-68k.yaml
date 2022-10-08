@@ -1,0 +1,15 @@
+compilers:
+  - description: "MPW SC"
+    match-sources: ".*\\.c"
+    match-language: "C"
+    match-compiler-exe: "(.*/)?mpw SC"
+    code-insight-target-name: m68k
+    include-dirs:
+      - ${user-home}/mpw/Interfaces/CIncludes
+    defines-text: "
+#define __SC__ 0x0801
+#define MPW_C 1
+#define OLDROUTINENAMES 1
+#define TYPE_BOOL 1
+#define pascal
+"

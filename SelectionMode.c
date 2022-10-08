@@ -1,0 +1,1 @@
+#include <Types.h>#include <Memory.h>#include <Quickdraw.h>#include <Fonts.h>#include <Events.h>#include <Menus.h>#include <Windows.h>#include <TextEdit.h>#include <Dialogs.h>#include <Sound.h>#include <ToolUtils.h>#include <Processes.h>#include <HyperXCmd.h>pascal void	main(XCmdPtr pp) {    _DataInit();    SendCardMessage(pp, "\pplay boing c e g");}
