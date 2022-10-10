@@ -7,7 +7,7 @@ RESTYPE=XCMD
 BIN_DIR=~/Programming/mpw/build/bin
 LD=$(BIN_DIR)/mpw link
 REZ=$(BIN_DIR)/mpw Rez
-CC=$(BIN_DIR)/mpw SC
+CC=./sc.sh
 RINCLUDES=~/mpw/Interfaces/RIncludes
 
 LDFLAGS=-rt $(RESTYPE)=$(RESID) \
