@@ -1,4 +1,4 @@
-SOURCES=SelectionMode.c
+SOURCES=SelectionMode.c A5WorldUtils.c
 RFILES=SelectionMode.r
 RNAME=SelectionMode
 RESID=7000
@@ -10,15 +10,15 @@ REZ=$(BIN_DIR)/mpw Rez
 CC=./sc.sh
 RINCLUDES=~/mpw/Interfaces/RIncludes
 
-LDFLAGS=-rt $(RESTYPE)=$(RESID) \
-	-m MAIN -sg $(RNAME) -t 'rsrc' -c 'RSED'
+LDFLAGS=-w -t 'rsrc' -c 'RSED' -rt $(RESTYPE)=$(RESID) \
+	-m MAIN -sg $(RNAME)
 
-LIBRARIES={Libraries}MathLib.o \
-	{CLibraries}StdCLib.o \
-	{Libraries}MacRuntime.o \
+LIBRARIES={Libraries}HyperXLib.o \
 	{Libraries}Interface.o \
-	{Libraries}HyperXLib.o \
-	{Libraries}IntEnv.o
+    //{Libraries}MathLib.o \
+	//{CLibraries}StdCLib.o \
+	//{Libraries}MacRuntime.o \
+	//{Libraries}IntEnv.o
 
 TOOLBOXFLAGS=-d OLDROUTINENAMES=1 -typecheck relaxed
 
