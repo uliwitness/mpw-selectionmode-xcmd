@@ -1,14 +1,13 @@
 compilers:
-  - description: "MPW SC"
+  - description: "MPW MrC"
     match-sources: ".*\\.c"
     match-language: "C"
-    match-compiler-exe: "(.*/)?sc.sh"
-    code-insight-target-name: m68k
+    match-compiler-exe: "(.*/)?mrc.sh"
+    code-insight-target-name: PowerPC
     include-dirs:
       - ${user-home}/mpw/Interfaces/CIncludes
     defines-text: "
-#define __SC__ 0x0801
-#define MPW_C 1
+#define __MRC__ 0x0700
 #define OLDROUTINENAMES 1
 #define TYPE_BOOL 1
 #define pascal
